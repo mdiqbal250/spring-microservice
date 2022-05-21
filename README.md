@@ -11,3 +11,8 @@ git remote add origin https://github.com/mdiqbal250/stringsAndArraysProgram.git
 git branch -M main
 git push -u origin main
 
+
+git clone url
+
+git cheatSheet https://www.freecodecamp.org/news/git-cheat-sheet/
+
