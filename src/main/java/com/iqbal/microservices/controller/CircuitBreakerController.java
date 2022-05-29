@@ -15,21 +15,21 @@ import io.github.resilience4j.retry.annotation.Retry;
 @RequestMapping(path = "/currency-exchange")
 public class CircuitBreakerController {
 
-	private Logger logger = LoggerFactory.getLogger(CircuitBreakerController.class);
+    private Logger logger = LoggerFactory.getLogger(CircuitBreakerController.class);
 
-	@GetMapping(path = "/sample-api")
-	// @Retry(name = "sampe-api", fallbackMethod = "handleFallback")
-	@CircuitBreaker(name = "defalut", fallbackMethod = "handleFallback")
-	public String sampleApi() {
-		logger.info("sample api");
+    @GetMapping(path = "/sample-api")
+    // @Retry(name = "sampe-api", fallbackMethod = "handleFallback")
+    @CircuitBreaker(name = "defalut", fallbackMethod = "handleFallback")
+    public String sampleApi() {
+        logger.info("sample api");
 
-		ResponseEntity<String> forEntity = new RestTemplate().getForEntity("http://localhost:2222", String.class);
+        ResponseEntity<String> forEntity = new RestTemplate().getForEntity("http://localhost:2222", String.class);
 
-		return forEntity.getBody();
-	}
+        return forEntity.getBody();
+    }
 
-	public String handleFallback(Exception ex) {
-		return "fallback respone";
-	}
+    public String handleFallback(Exception ex) {
+        return "fallback respone";
+    }
 
 }

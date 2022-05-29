@@ -9,8 +9,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableDiscoveryClient
 public class CurrencyExchangeServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CurrencyExchangeServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CurrencyExchangeServiceApplication.class, args);
+    }
 
 }
