@@ -20,5 +20,6 @@ Microservice with spring boot
 
 * git pull request
 * Master Branch
+* git merge origin/master -to  merge with your local 
 
 
